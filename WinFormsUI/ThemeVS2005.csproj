@@ -97,6 +97,7 @@
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemeVS2005\Strings.zh-Hans.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ThemeVS2005\Resources\DockIndicator_PaneDiamond.png" />
