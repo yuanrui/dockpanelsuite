@@ -123,6 +123,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemeVS2012\Strings.zh-Hans.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dockpanelsuite.snk" />
