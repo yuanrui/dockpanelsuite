@@ -151,22 +151,22 @@
     <value>停靠面板为空值。</value>
   </data>
   <data name="DockContentHandler_ShowHint_InvalidValue" xml:space="preserve">
-    <value>Invalid value, check DockableAreas property.</value>
+    <value>无效值，请检查DockableAreas属性。</value>
   </data>
   <data name="DockContentHandler_Show_InvalidBeforeContent" xml:space="preserve">
-    <value>Invalid beforeContent, it must be contained by the pane.</value>
+    <value>之前的内容无效，必须包含在窗格中。</value>
   </data>
   <data name="DockContentHandler_Show_InvalidDockState" xml:space="preserve">
-    <value>Invalid DockState: Content can not be showed as "Unknown" or "Hidden".</value>
+    <value>DockState无效：内容不能显示为“未知”或“隐藏”。</value>
   </data>
   <data name="DockContentHandler_Show_InvalidPrevPane" xml:space="preserve">
-    <value>The previous pane is invalid. It can not be null, and its docking state must not be auto-hide.</value>
+    <value>上一个窗格无效。它不能为空，停靠状态也不能自动隐藏。</value>
   </data>
   <data name="DockContentHandler_Show_NullDockPanel" xml:space="preserve">
-    <value>DockPanel can not be null.</value>
+    <value>DockPanel 不能为空。</value>
   </data>
   <data name="DockContentHandler_Show_NullPane" xml:space="preserve">
-    <value>The Pane can not be null.</value>
+    <value>窗格不能为空。</value>
   </data>
   <data name="DockContent_AllowEndUserDocking_Description" xml:space="preserve">
     <value>确定是否允许最终用户拖放停靠。</value>
@@ -202,7 +202,7 @@
     <value>当鼠标悬停在选项卡上时显示的文本。</value>
   </data>
   <data name="DockHandler_TabPageContextMenuStrip_Description" xml:space="preserve">
-    <value>Context menu displayed for the dock pane tab strip.</value>
+    <value>为停靠窗格选项卡条带显示上下文菜单。</value>
   </data>
   <data name="DockIndicator_ToolTipText" xml:space="preserve">
     <value>按SHIFT键停靠在全侧面。</value>
@@ -220,39 +220,39 @@
     <value>窗口列表</value>
   </data>
   <data name="DockPane_ActiveContent_InvalidValue" xml:space="preserve">
-    <value>Invalid Content: ActiveContent must be one of the visible contents, or null if there is no visible content.</value>
+    <value>无效内容：ActiveContent必须包含一个可见内容，如果没有可见内容，则为null.</value>
   </data>
   <data name="DockPane_Constructor_NullContent" xml:space="preserve">
-    <value>Invalid argument: Content can not be "null".</value>
+    <value>无效参数:内容不能为“null”.</value>
   </data>
   <data name="DockPane_Constructor_NullDockPanel" xml:space="preserve">
-    <value>Invalid argument: The content's DockPanel can not be "null".</value>
+    <value>无效参数：内容DockPanel不能为“null”.</value>
   </data>
   <data name="DockPane_DockTo_InvalidContainer" xml:space="preserve">
-    <value>The specified container conflicts with the IsFloat property.</value>
+    <value>指定的容器与IsFloat属性冲突。</value>
   </data>
   <data name="DockPane_DockTo_NoPrevPane" xml:space="preserve">
-    <value>The previous pane does not exist in the nested docking pane collection.</value>
+    <value>上一个窗格不存在于嵌套的停靠窗格集合中。</value>
   </data>
   <data name="DockPane_DockTo_NullContainer" xml:space="preserve">
-    <value>The container can not be null.</value>
+    <value>容器不能为空。</value>
   </data>
   <data name="DockPane_DockTo_NullPrevPane" xml:space="preserve">
-    <value>The previous pane can not be null when the nested docking pane collection is not empty.</value>
+    <value>当嵌套停靠窗格集合不为空时，上一个窗格不能为空。</value>
   </data>
   <data name="DockPane_DockTo_SelfPrevPane" xml:space="preserve">
-    <value>The previous pane can not be itself.</value>
+    <value>上一个窗格不能是它自己。</value>
   </data>
   <data name="DockPane_FloatWindow_InvalidValue" xml:space="preserve">
-    <value>FloatWindow property can not be set to "null" when DockState is DockState.Float.</value>
+    <value>DockState为DockState.Float时，FloatWindow属性不能设置为“null”.</value>
   </data>
   <data name="DockPane_SetContentIndex_InvalidContent" xml:space="preserve">
-    <value>Invalid Content: Content not within the collection.</value>
+    <value>无效内容:内容不在集合中。</value>
   </data>
   <data name="DockPane_SetContentIndex_InvalidIndex" xml:space="preserve">
-    <value>Invalid Index: The index is out of range.</value>
+    <value>无效索引:索引超出范围。</value>
   </data>
   <data name="DockPane_SetDockState_InvalidState" xml:space="preserve">
-    <value>The state for the dock pane is invalid.</value>
+    <value>停靠窗格的状态无效。</value>
   </data>
 </root>
