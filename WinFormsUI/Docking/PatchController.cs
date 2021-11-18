@@ -15,7 +15,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 = _nestedDisposalFix = _focusLostFix = _contentOrderFix
                 = _fontInheritanceFix = _activeXFix = _displayingPaneFix
                 = _activeControlFix = _floatSplitterFix = _activateOnDockFix
-                = _selectClosestOnClose = null;
+                = _selectClosestOnClose = _perScreenDpi = null;
         }
 
 #region Copy this section to create new option, and then comment it to show what needs to be modified.
@@ -35,7 +35,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _highDpi = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -46,7 +46,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _highDpi = section.EnableHighDpi;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableHighDpi");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -115,7 +115,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _memoryLeakFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -126,7 +126,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _memoryLeakFix = section.EnableMemoryLeakFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableMemoryLeakFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -193,7 +193,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _focusLostFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -204,7 +204,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _focusLostFix = section.EnableMainWindowFocusLostFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableMainWindowFocusLostFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -271,7 +271,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _nestedDisposalFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -282,7 +282,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _nestedDisposalFix = section.EnableNestedDisposalFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableNestedDisposalFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -349,7 +349,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _fontInheritanceFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -360,7 +360,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _fontInheritanceFix = section.EnableFontInheritanceFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableFontInheritanceFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -427,7 +427,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _contentOrderFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -438,7 +438,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _contentOrderFix = section.EnableContentOrderFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableContentOrderFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -505,7 +505,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _activeXFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -516,7 +516,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _activeXFix = section.EnableActiveXFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableActiveXFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -583,7 +583,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _displayingPaneFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -594,7 +594,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _displayingPaneFix = section.EnableDisplayingPaneFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableDisplayingPaneFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -661,7 +661,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _activeControlFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -672,7 +672,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _activeControlFix = section.EnableActiveControlFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableActiveControlFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -739,7 +739,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _floatSplitterFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -750,7 +750,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _floatSplitterFix = section.EnableFloatSplitterFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableFloatSplitterFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -817,7 +817,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _activateOnDockFix = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -828,7 +828,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _activateOnDockFix = section.EnableActivateOnDockFix;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableActivateOnDockFix");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -879,7 +879,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 _activateOnDockFix = value;
             }
         }
-        
+
         private static bool? _selectClosestOnClose;
 
         public static bool? EnableSelectClosestOnClose
@@ -895,7 +895,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _selectClosestOnClose = EnableAll;
                 }
-
+#if NET35 || NET40
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -906,7 +906,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                     return _selectClosestOnClose = section.EnableSelectClosestOnClose;
                 }
-
+#endif
                 var environment = Environment.GetEnvironmentVariable("DPS_EnableSelectClosestOnClose");
                 if (!string.IsNullOrEmpty(environment))
                 {
@@ -955,6 +955,84 @@ namespace WeifenLuo.WinFormsUI.Docking
             set
             {
                 _selectClosestOnClose = value;
+            }
+        }
+
+        private static bool? _perScreenDpi;
+
+        public static bool? EnablePerScreenDpi
+        {
+            get
+            {
+                if (_perScreenDpi != null)
+                {
+                    return _perScreenDpi;
+                }
+
+                if (EnableAll != null)
+                {
+                    return _perScreenDpi = EnableAll;
+                }
+#if NET35 || NET40
+                var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
+                if (section != null)
+                {
+                    if (section.EnableAll != null)
+                    {
+                        return _perScreenDpi = section.EnableAll;
+                    }
+
+                    return _perScreenDpi = section.EnablePerScreenDpi;
+                }
+#endif
+                var environment = Environment.GetEnvironmentVariable("DPS_EnablePerScreenDpi");
+                if (!string.IsNullOrEmpty(environment))
+                {
+                    var enable = false;
+                    if (bool.TryParse(environment, out enable))
+                    {
+                        return _perScreenDpi = enable;
+                    }
+                }
+
+                {
+                    var key = Registry.CurrentUser.OpenSubKey(@"Software\DockPanelSuite");
+                    if (key != null)
+                    {
+                        var pair = key.GetValue("EnablePerScreenDpi");
+                        if (pair != null)
+                        {
+                            var enable = false;
+                            if (bool.TryParse(pair.ToString(), out enable))
+                            {
+                                return _perScreenDpi = enable;
+                            }
+                        }
+                    }
+                }
+
+                {
+                    var key = Registry.LocalMachine.OpenSubKey(@"Software\DockPanelSuite");
+                    if (key != null)
+                    {
+                        var pair = key.GetValue("EnablePerScreenDpi");
+                        if (pair != null)
+                        {
+                            var enable = false;
+                            if (bool.TryParse(pair.ToString(), out enable))
+                            {
+                                return _perScreenDpi = enable;
+                            }
+                        }
+                    }
+                }
+
+                return _perScreenDpi = false;
+            }
+
+            set
+            {
+                _perScreenDpi = value;
             }
         }
     }
